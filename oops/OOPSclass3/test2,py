@@ -1,0 +1,33 @@
+
+#multiple
+class bank:   
+    def transaction(self):
+        print("total transatio value")
+    def accout_opening(self):
+        print("this will show yor acc open stayus")
+    def deposite(self):
+        print("this is to deposite")
+    def test(self):
+        print("this is a text method from bank class")
+
+class HDFC_bank(bank):
+    def hdfc_to_icici(self):
+        print("this will show your all transaction happened btw hdfc to icici")
+    def test(self):
+        print("test method from hdfc class")
+
+class ineuron_bank:
+    def account_status_icici(self):
+        print("acc status in icici")
+class icici(HDFC_bank,bank, ineuron_bank):
+    pass
+i =icici()
+
+i.hdfc_to_icici()
+i.deposite()
+i.accout_opening()
+i.transaction()
+i.test()   #1st class ko priority milega
+i.account_status_icici()
+
+
